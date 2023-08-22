@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow a</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="guess-block">
+    <img class="hidden-man" src="img/shadow-man-hidden.png">
+    <label class="player-guess" for="player-guess">Guess the DStv Premiership  player:</label>
+    <div class="autocomplete">
+      <input type="text" id="player-guess" aria-autocomplete="list" autocomplete="off">
+      <div id="options-container" class="options-dropdown" role="listbox"></div>
+    </div>
+  </div>
+
+  <div class="all-attempts">
+    <div class="main-attempts">
+      <div class="attempt-1-container">
+        <div class="player-name-label"><span id="selected-player-name"></span></div>
+        <div class="attempt-1">
+          <div class="circle-container">
+            <div class="circle" data-attribute="playerNationality"></div>
+            <div class="label">Nationality</div>
+          </div>
+          <div class="circle-container">
+            <div class="circle" data-attribute="club"></div>
+            <div class="label">Club</div>
+          </div>
+          <div class="circle-container">
+            <div class="circle" data-attribute="playerBirthday"></div>
+            <div class="label">Age</div>
+          </div>
+          <div class="circle-container">
+            <div class="circle" data-attribute="jerseyNo"></div>
+            <div class="label">Jersey No.</div>
+          </div>
+          <div class="circle-container">
+            <div class="circle" data-attribute="playerPosition"></div>
+            <div class="label">Position</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="attempts-wrapper"></div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Game Over</h2>
+      <p id="modal-message"></p>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
