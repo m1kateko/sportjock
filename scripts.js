@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayCongratulationsModal() {
-    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} correctly. You did it in ${attemptNumber} guesses.`;
+    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname} correctly. You did it in ${attemptNumber} guesses.`;
     modal.style.display = "flex";
   }
 
