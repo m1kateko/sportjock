@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const attemptsWrapper = document.getElementById("attempts-wrapper"); // Wrapper for all attempts
   const modal = document.getElementById("modal");
   const modalMessage = document.getElementById("modal-message");
+  const modalHeading = document.getElementById("modal-heading");
   const closeModalButton = document.getElementById("close-modal");
 
   let players = []; // Store the players data
@@ -193,11 +194,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayModal() {
+    modalHeading.textContent = `Game over!`;
     modalMessage.textContent = `Better luck next time, you didn't get it! The hidden player today was ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname}.`;
     modal.style.display = "flex";
   }
 
   function displayCongratulationsModal() {
+    modalHeading.textContent = `You got it!`;
     modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname} correctly. You did it in ${attemptNumber} guesses.`;
     modal.style.display = "flex";
   }
