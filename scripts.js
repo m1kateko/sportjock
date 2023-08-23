@@ -70,6 +70,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const guessedJerseyNo = selectedPlayer.jerseyNo;
     const guessedPosition = getPlayerPositionAbbreviation(selectedPlayer.playerPosition);
 
+	// Apply the pop animation to the circles
+    circles.forEach(circle => {
+        circle.style.animation = "pop 0.5s ease-in-out";
+        setTimeout(() => {
+            circle.style.animation = ""; // Remove the animation after it plays
+        }, 500); // Wait for the animation to complete (0.5s)
+    });
     const isCorrectNationality = guessedNationality === hiddenPlayer.playerNationality.toLowerCase().replace(/\s/g, "-");
     const isCorrectClub = guessedClub === hiddenPlayer.club.toLowerCase().replace(/\s/g, "-");
     const isCorrectAge = guessedAge === calculateAge(hiddenPlayer.playerBirthday);
