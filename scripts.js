@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function checkGameStatus(isCorrect) {
     if (isCorrect) {
       displayCongratulationsModal();
+      inputField.disabled = true;
     } else {
       displayModal();
     }
