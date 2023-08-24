@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function displayModal() {
     modalHeading.textContent = `Game over!`;
-    modalMessage.textContent = `Better luck next time, you didn't get it! The hidden player today was ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname}.`;
+    modalMessage.textContent = `Better luck next time, you didn't get it! The hidden player today was ${hiddenPlayer.playerName}.bold() ${hiddenPlayer.playerSurname}.bold().`;
     modal.style.display = "flex";
   }
 
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	  // Decrement attemptNumber by 1
 	  attemptNumber -= 1;
     modalHeading.textContent = `You got it!`;
-    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname} correctly. You did it in ${attemptNumber} guesses.`;
+    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName}.bold() ${hiddenPlayer.playerSurname}.bold() correctly. You did it in ${attemptNumber} guesses.`;
     modal.style.display = "flex";
   }
 
