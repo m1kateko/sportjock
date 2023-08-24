@@ -207,8 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function displayCongratulationsModal() {
+	  // Decrement attemptNumber by 1
+	  attemptNumber -= 1;
     modalHeading.textContent = `You got it!`;
-    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname} correctly. You did it in ${attemptNumber}-1 guesses.`;
+    modalMessage.textContent = `Congratulations! You guessed ${hiddenPlayer.playerName} ${hiddenPlayer.playerSurname} correctly. You did it in ${attemptNumber} guesses.`;
     modal.style.display = "flex";
   }
 
